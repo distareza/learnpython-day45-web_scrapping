@@ -25,7 +25,7 @@ article_upvotes = [ int(score.getText().split()[0]) for score in soup.find_all(n
 # print(article_links)
 # print(article_upvotes)
 
-#Get the highest score of the article
+#Get the highest score of the article available
 highest_score = max(article_upvotes)
 article_index = article_upvotes.index(highest_score)
 popular_article = article_texts[article_index]
