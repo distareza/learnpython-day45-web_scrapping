@@ -17,6 +17,7 @@ web_content = BeautifulSoup(response.text, 'html.parser')
 movies = [anchor.getText() for anchor in web_content.select(selector="h3.title")]
 ascending_movie = movies[::-1]
 
-with open("movies.txt", mode="w") as file:
+with open("movies.txt", mode="w", encoding="UTF-8") as file:
     for movie in ascending_movie:
         file.write(f"{movie}\n")
+    print("movie.txt is created")
