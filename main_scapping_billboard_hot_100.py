@@ -2,7 +2,23 @@
     Create a Spotify Play list of top 100 song of particular date in past
 
     Step 1 - Scraping the Billboard Hot 100
+            https://www.billboard.com/charts/hot-100/2009-05-01
     Step 2 - Authentication with Spotify
+            http://spotify.com/signup/
+            https://developer.spotify.com/dashboard/
+            https://spotipy.readthedocs.io/
+
+            HINT 1: You need your own Spotify app Client ID and Secret.
+            HINT 2: This is the method you'll need: https://spotipy.readthedocs.io/en/2.13.0/#spotipy.oauth2.SpotifyOAuth
+            HINT 3: Try passing the Client ID and Secret directly into the SpotifyOAuth() constructor instead of using export or set.
+                    Use http://example.com as your Redirect URI. You're looking to get the currentuser id (your Spotify username).
+                    As per the documentation, make sure you set the redirect URI in the Spotify Dashboard as well.
+            HINT 4: You need the "playlist-modify-private" scope in order to create a private playlist on Spotify.
+            HINT 5:  If successful, you should see the "confirmation" page show up automatically (be sure to click Agree):
+                    Then it will take you to the page, example.com and you need to copy the entire URL in the address bar:
+                    Finally, you need to paste the URL into the prompt in PyCharm:
+                    Now if you close PyCharm and restart, you should see a new file in this project called token.txt
+
     Step 3 - Search Spotify for the Songs from Step 1
     Step 4 - Creating and Adding to Spotify Playlist
 """
